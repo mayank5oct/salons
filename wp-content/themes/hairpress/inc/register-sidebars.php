@@ -128,6 +128,19 @@ function add_my_sidebars() {
 		)
 	);
 	
+        //Above footer
+	register_sidebar(
+		array(
+			'name'          => __( 'Above Footer' , 'proteusthemes'),
+			'id'            => 'above-footer-sidebar-area',
+			'description'   => __( 'Sidebar in the dark area at the bottom of the website' , 'proteusthemes'),
+			'before_widget' => '<div class="span3"><div class="%2$s">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '<div class="lined">',
+			'after_title'   => '<span class="bolded-line"></span></div>'
+		)
+	);
+        
 	// footer
 	register_sidebar(
 		array(
