@@ -67,15 +67,7 @@ Template Name: Front Page with Theme Slider
     	</div>
 	</div><!-- /container -->
  
-<?php
 
-$display_team = ot_get_option('team_front_page', 'yes');
-if( "yes" === $display_team ) :
-?>
- 
-	<?php get_template_part( 'darkstripe' ); ?>
-    
-<?php endif; ?>
 
 	<div class="container">
 	
@@ -84,7 +76,21 @@ if( "yes" === $display_team ) :
 	      <?php dynamic_sidebar( 'home-under-dark' ); ?>
 	      
 	  </div>
-	</div><!-- /container -->
+            
+            <?php
+
+$display_team = ot_get_option('team_front_page', 'yes');
+if( "yes" === $display_team ) :
+?>
+ 
+	<?php get_template_part( 'darkstripe' ); ?>
     
+<?php endif; ?>
+            
+	</div><!-- /container -->
+
+        <div class="container">
+             <?php dynamic_sidebar( 'above-footer' ); ?>
+        </div>
 
 <?php get_footer(); ?>
